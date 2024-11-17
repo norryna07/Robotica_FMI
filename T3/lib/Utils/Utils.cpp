@@ -8,10 +8,6 @@ void initSerial()
     Serial.begin(9600);
 }
 
-void initSPISlave()
-{
-}
-
 void initButtons()
 {
     pinMode(PLAYER0_Buttons, INPUT);
@@ -44,4 +40,11 @@ uint8_t colorAnalog(int analogValue)
     if (analogValue < BTN_YELLOW_LIMIT) return BTN_YELLOW;
     if (analogValue < BTN_BLUE_LIMIT) return BTN_BLUE;
     return INCORRECT;
+}
+
+void initSPISlave() 
+{
+    pinMode(MISO, OUTPUT);
+    SPCR |= _BV(SPE);
+    SPI.attachInterrupt();
 }

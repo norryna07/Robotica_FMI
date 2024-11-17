@@ -11,4 +11,4 @@ uint8_t player1_button_state = NO_BTN;
 uint8_t player1_button_last_state = INCORRECT;
 
 uint64_t timer = 0;
-uint8_t player = 0;
+uint8_t player = NOT_PLAYING;

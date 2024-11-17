@@ -15,6 +15,8 @@
 #define BTN_YELLOW_LIMIT 350
 #define BTN_BLUE_LIMIT 750
 
+#define NOT_PLAYING 2
+
 extern uint64_t player0_button_last_debounce_time;
 extern uint8_t player0_button_state;
 extern uint8_t player0_button_last_state;
